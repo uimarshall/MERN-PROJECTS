@@ -1,0 +1,27 @@
+{
+	"name": "MERN_SHOPPING_LIST",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"client-install": "npm install --prefix client",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"concurrently": "^4.1.0",
+		"express": "^4.16.4",
+		"mongoose": "^5.4.14"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.10"
+	}
+}
